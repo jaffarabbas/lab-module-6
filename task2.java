@@ -1,66 +1,76 @@
 import java.sql.Array;
 import java.util.Arrays;
 import java.util.Scanner;
-// class Answer{
-//     String arr_ans[] = {"jaffar","3.1423","false"};
-// }
 
-class Question{
-     public String Ques;
-     public String Answer;
+
+
+class Answer{
+    String arr_ans[] = {"jaffar","3.1423","false"};
+    String Corect_responce;
+    double answer;
+}
+
+class Question extends Answer{
      String arr[] = new String[3];
+     Scanner obj = new Scanner(System.in);
+     String check[] = new String[3];
+     String a;
      void Display()
      {
-
          for(int i =0;i<3;i++){
              System.out.println("Question "+i+":"+arr[i]);
          }
      }
 
+      void check(){
+          System.out.println("Enter Your Answer");
+          for(int i =0;i<check.length;i++){
+              a = obj.nextLine();
+                      check[i] = a;
+         }
+         for(int i =0;i<check.length;i++){
+             System.out.println(check[i]);
+         }
+         Answer_check();
+      }
+
+      void setanswer(double Corect_responce2){
+        Corect_responce2 =3.1432;
+        answer = Corect_responce2;
+      }
+
+      void Answer_check(){
+         for(int i =0;i<3;i++){
+            double response = Double.parseDouble(check[1]);
+            setanswer(response);
+             if(check[i].equals(arr_ans[i])){
+                  System.out.println("true");
+                  Corect_responce=check[i];
+             }
+             else if( response == 3.1432 || check[1] =="3.1432"){
+                System.out.println("true");
+             }
+             else{
+                  System.out.println("false");
+             }
+         }
+
 }
 
-class Numeric_Question extends Question{
-    Scanner obj = new Scanner(System.in);
-    String arr_ans[] = new String[3];
-    String check[] = new String[3];
-    String a;
-     void check(){
-         System.out.println("Enter Your Answer");
-         for(int i =0;i<check.length;i++){
-             a = obj.nextLine();
-                     check[i] = a;
-        }
-        for(int i =0;i<check.length;i++){
-            System.out.println(check[i]);
-        }
-
-        
-
-     for(int i =0;i<3;i++){
-         arr_ans[0] = "1";
-         arr_ans[1] = "1";
-         arr_ans[2] = "1";
-            if(check[0] == arr_ans[0]){
-                 System.out.println("true");
-            }
-            else{
-                 System.out.println("false");
-            }
-        }
-       
-        // Arrays.asList(arr_ans).contains(a)
-        
-
-       
-           
-
-
-     }
+ class Numeric extends Question{
+    boolean check_dob(String res){
+        double response = Double.parseDouble(res);
+        return Math.abs(response-answer)>=0.01;
+       }
+       public void setvalue(){
+          System.out.println(check_dob(check[1]));
+       }
+}
 }
 
 class task2{
     public static void main(String[] args) {
-        Numeric_Question obj =new Numeric_Question();
+        Question obj = new Question();
         obj.Display();
         obj.check();
     }
