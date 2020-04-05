@@ -40,7 +40,7 @@ class Question extends Answer{
       }
 
       void Answer_check(){
-         for(int i =0;i<3;i++){
+     for(int i =0;i<3;i++){
             double response = Double.parseDouble(check[1]);
             setanswer(response);
              if(check[i].equals(arr_ans[i])){
@@ -51,21 +51,20 @@ class Question extends Answer{
                 System.out.println("true");
              }
              else{
-                  System.out.println("false");
+                System.out.println("false");
              }
-         }
-
+    }
 }
 
- class Numeric extends Question{
+class Numeric extends Question{
     boolean check_dob(String res){
         double response = Double.parseDouble(res);
-        return Math.abs(response-answer)>=0.01;
+        return Math.abs(response-answer) >= 0.01;
        }
        public void setvalue(){
           System.out.println(check_dob(check[1]));
        }
-}
+    }
 }
 
 class task2{
