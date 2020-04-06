@@ -41,36 +41,46 @@ class Question extends Answer{
 
       void Answer_check(){
      for(int i =0;i<3;i++){
-            double response = Double.parseDouble(check[1]);
+             double response = Double.parseDouble(check[1]);
             setanswer(response);
              if(check[i].equals(arr_ans[i])){
                   System.out.println("true");
                   Corect_responce=check[i];
              }
              else if( response == 3.1432 || check[1] =="3.1432"){
+               // ob.check_dob("3.1423");
                 System.out.println("true");
+               
              }
              else{
                 System.out.println("false");
              }
     }
 }
-
-class Numeric extends Question{
-    boolean check_dob(String res){
+public class Numeric extends Question{
+    public boolean check_dob(String res) {
         double response = Double.parseDouble(res);
-        return Math.abs(response-answer) >= 0.01;
-       }
-       public void setvalue(){
-          System.out.println(check_dob(check[1]));
-       }
-    }
+        return Math.abs(response - answer) >= 0.01;
+   }
+   public void setvalue(){
+    System.out.print(check_dob(check[1]));
+ }
 }
 
+class test extends Numeric{
+  
+    void check(){
+        setvalue();
+        Display();
+        check();}
+}
 class task2{
-    public static void main(String[] args) {
-        Question obj = new Question();
-        obj.Display();
-        obj.check();
+    public void main( String[] args) {
+        //  Question obj = new Question();
+        // obj.Display();
+        // obj.check();
+        test ob = new test();  
+        ob.check();
     }
+}
 }
