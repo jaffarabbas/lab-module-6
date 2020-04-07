@@ -1,3 +1,3 @@
- //  Question obj = new Question();
-        // obj.Display();
-        // obj.check();
+for(String i : narr){
+            narr.add(i);
+        }
