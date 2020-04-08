@@ -1,3 +1,5 @@
+package com.company;
+
 import java.sql.Array;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -57,7 +59,7 @@ class Question extends Answer{
              }
     }
 }
-public class Numeric extends Question{
+public static class Numeric extends Question{
     public boolean check_dob(String res) {
         double response = Double.parseDouble(res);
         return Math.abs(response - answer) >= 0.01;
@@ -67,19 +69,19 @@ public class Numeric extends Question{
  }
 }
 
-class test extends Numeric{
-  
+static class test{
+         Numeric obj = new Numeric();
     void check(){
-        setvalue();
-        Display();
-        check();}
+        obj.setvalue();
+        obj.Display();
+        obj.check();}
 }
-class task2{
+static class task2{
     public void main( String[] args) {
         //  Question obj = new Question();
         // obj.Display();
         // obj.check();
-        test ob = new test();  
+        test ob = new test();
         ob.check();
     }
 }
