@@ -1,4 +1,4 @@
-package com.company;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ class Appointment{
        return Desciption + "  date : " + d + " " + m + " " + y;
     }
 
-   String arr[] = new String[10];
+   String Date[] = new String[10];
 
    String add_appoitment(){
        System.out.println("Description : ");
@@ -36,14 +36,14 @@ class Toaday extends Appointment {
          System.out.println("Day : will 1");
          date = obj.nextInt();
         for (int j = 1; j <= 3; j++) {
-            arr[1] = arr("jaffar", 1, 3, 2020);
-            arr[2] = arr("fahad", 1, 3, 2020);
-            arr[3] = arr("ahmed", 1, 3, 2020);
+            Date[1] = arr("dentuist", 1, 3, 2020);
+            Date[2] = arr("heart", 1, 3, 2020);
+            Date[3] = arr("barain", 1, 3, 2020);
         }
 
         for (int i = 1; i <= 3; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }
@@ -56,12 +56,12 @@ class Toaday extends Appointment {
         System.out.println("Day : ");
         date = obj.nextInt();
         for(int i=1;i<=n;i++){
-            arr[date]=add_appoitment();
+            Date[date]=add_appoitment();
         }
 
         for (int i = 1; i <= date; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }
@@ -74,15 +74,15 @@ class Monthly extends Appointment {
         System.out.println("Day : ");
         date = obj.nextInt();
         for(int i=0;i<=10;i++){
-            arr[1]=arr("des", 1, 2, 2020);
-            arr[2]=arr("des", 2, 2, 2020);
-            arr[3]=arr("des", 3, 2, 2020);
+            Date[1]=arr("des", 1, 2, 2020);
+            Date[2]=arr("des", 2, 2, 2020);
+            Date[3]=arr("des", 3, 2, 2020);
         }
 
-        arr[4]=add_appoitment();
+        Date[4]=add_appoitment();
         for (int i = 1; i <= 4; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }
@@ -94,12 +94,12 @@ class Monthly extends Appointment {
         System.out.println("Day : ");
         date = obj.nextInt();
         for(int i=1;i<=n;i++){
-            arr[date]=add_appoitment();
+            Date[date]=add_appoitment();
         }
 
         for (int i = 1; i <= date; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }
@@ -111,15 +111,15 @@ class year extends Appointment{
         System.out.println("Day : ");
         date = obj.nextInt();
         for(int i=0;i<=10;i++){
-            arr[1]=arr("des", 1, 2, 2020);
-            arr[2]=arr("des", 2, 2, 2020);
-            arr[3]=arr("des", 3, 2, 2020);
+            Date[1]=arr("des", 1, 2, 2020);
+            Date[2]=arr("des", 2, 2, 2020);
+            Date[3]=arr("des", 3, 2, 2020);
         }
 
-        arr[4]=add_appoitment();
+        Date[4]=add_appoitment();
         for (int i = 1; i <= 4; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }
@@ -131,12 +131,12 @@ class year extends Appointment{
         System.out.println("Day : ");
         date = obj.nextInt();
         for(int i=1;i<=n;i++){
-            arr[date]=add_appoitment();
+            Date[date]=add_appoitment();
         }
 
         for (int i = 1; i <= date; i++) {
             if (i == date) {
-                System.out.println(arr[i]);
+                System.out.println(Date[i]);
                 break;
             }
         }

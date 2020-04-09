@@ -1,1 +1,1 @@
- // obj.toaday();
+System.out.println(o.setvalue());

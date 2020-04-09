@@ -1,4 +1,4 @@
-package com.company;
+
 
 import java.sql.Array;
 import java.util.Arrays;
@@ -64,23 +64,21 @@ public static class Numeric extends Question{
         double response = Double.parseDouble(res);
         return Math.abs(response - answer) >= 0.01;
    }
-   public void setvalue(){
-    System.out.print(check_dob(check[1]));
+   public boolean setvalue(){
+   return check_dob(check[1]);
  }
 }
 
 static class test{
          Numeric obj = new Numeric();
     void check(){
-        obj.setvalue();
+       System.out.println(obj.setvalue());
         obj.Display();
-        obj.check();}
+        obj.check();
+    }
 }
 static class task2{
     public void main( String[] args) {
-        //  Question obj = new Question();
-        // obj.Display();
-        // obj.check();
         test ob = new test();
         ob.check();
     }
